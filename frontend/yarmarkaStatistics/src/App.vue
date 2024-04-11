@@ -24,9 +24,9 @@ import HelloWorld from './components/HelloWorld.vue'
 
 
   <footer>
-    <div class="footer-punct">© Федеральная служба по труду и занятости — rostrud.ru.</div>
-    <div class="footer-punct">trudvsem.ru </div>
-    <div class="footer-punct">murman-zan.ru</div>
+    <div class="footer-punct">© Федеральная служба по труду и занятости — <a href="https://rostrud.ru">rostrud.ru</a>.</div>
+    <div class="footer-punct"><a href="https://trudvsem.ru">trudvsem.ru</a> </div>
+    <div class="footer-punct"><a href="https://murman-zan.ru">murman-zan.ru</a></div>
   </footer>
 
   <RouterView />
@@ -90,5 +90,10 @@ footer{
 .logo-img{
   margin-left: 5px;
   margin-right: 5px;
+}
+
+a{
+  text-decoration: none;
+  color: white;
 }
 </style>

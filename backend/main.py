@@ -2,6 +2,7 @@ from typing import Union
 from fastapi import FastAPI, status, Response
 from pydantic import BaseModel
 from dbTools import Person, addParticipant, showStatistics
+from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 import os
 
@@ -13,6 +14,15 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 
 app = FastAPI()
 
+origins = ["*"]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.post("/send_person_data", status_code=status.HTTP_200_OK)
 async def handelPersonData(person: Person, response: Response):
