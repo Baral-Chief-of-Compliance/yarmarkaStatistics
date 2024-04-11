@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("./Montserrat/Montserrat-Medium.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat";
+}
+
+:root{
+  --main-red-color: #CF4520;
+  --main-blue-color: #69B3E7;
+  --main-dark-blue-color: #0033A0;
+}
